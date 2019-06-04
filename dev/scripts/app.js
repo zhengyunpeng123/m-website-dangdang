@@ -93,29 +93,18 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var Name = __webpack_require__(/*! ./controller/Name */ \"./src/controller/Name.js\"); //commonJS 模块化\n// import { Name } from './controller/Name'   //ES6模块化 \n\n\nvar aaTpl = __webpack_require__(/*! ./views/aa.art */ \"./src/views/aa.art\");\n\nconsole.log(Name);\nvar newStr = template.render(aaTpl, {\n  title: 'bbb'\n});\nconsole.log(newStr);\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("var indexTpl = __webpack_require__(/*! ./views/index.html */ \"./src/views/index.html\");\n\nvar renderedIndexTpl = template.render(indexTpl, {});\ndocument.querySelector('#app').innerHTML = renderedIndexTpl;\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
-/***/ "./src/controller/Name.js":
-/*!********************************!*\
-  !*** ./src/controller/Name.js ***!
-  \********************************/
+/***/ "./src/views/index.html":
+/*!******************************!*\
+  !*** ./src/views/index.html ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = 'hello world'; //commonJS模块化\n// export const name = 'hello world'  //ES6模块化\n\n//# sourceURL=webpack:///./src/controller/Name.js?");
-
-/***/ }),
-
-/***/ "./src/views/aa.art":
-/*!**************************!*\
-  !*** ./src/views/aa.art ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = \"<div>{{title}}</div>\"\n\n//# sourceURL=webpack:///./src/views/aa.art?");
+eval("module.exports = \"<div class=\\\"container\\\">    <header></header>    <main></main>    <nav>        <ul>            <li>                <i class=\\\"yo-ico\\\">&#xe6bb;</i>                <b>首页</b>            </li>            <li>                <i class=\\\"yo-ico\\\">&#xe634;</i>                <b>分类</b>            </li>            <li>                <i class=\\\"yo-ico\\\">&#xe6cd;</i>                <b>值得买</b>            </li>            <li>                <i class=\\\"yo-ico\\\">&#xe6af;</i>                <b>购物车</b>            </li>            <li>                <i class=\\\"yo-ico\\\">&#xe736;</i>                <b>我的当当</b>            </li>        </ul>    </nav>    <footer></footer></div>\"\n\n//# sourceURL=webpack:///./src/views/index.html?");
 
 /***/ })
 

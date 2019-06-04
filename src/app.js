@@ -1,9 +1,5 @@
-const Name = require('./controller/Name')   //commonJS 模块化
-// import { Name } from './controller/Name'   //ES6模块化 
-const aaTpl = require('./views/aa.art')
+const indexTpl = require('./views/index.html') 
 
-console.log(Name);
+const renderedIndexTpl = template.render(indexTpl,{})
 
-const newStr = template.render(aaTpl,{title:'bbb'})
-
-console.log(newStr);
+document.querySelector('#app').innerHTML = renderedIndexTpl

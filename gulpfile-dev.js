@@ -59,7 +59,7 @@ function packjs(){
                             }
                         }
                     },{
-                        test: /\.art$/,
+                        test: /\.html$/,
                         loader: 'string-loader'
                     }
                 ]
@@ -93,6 +93,13 @@ function copyimages(){
         .pipe(dest('./dev/images'))
 }
 
+// clear方法
+function clear(){
+    return function() {
+        return del(target)
+    }
+}
+
 // 设置监听
 function watcher(){
     watch('./src/libs/**/*', series(clear('./dev/libs'), copylibs))
@@ -103,10 +110,4 @@ function watcher(){
     watch(['./src/**/*', '!src/libs/**/*', '!src/icons/**/*', '!src/images/**/*', '!src/styles/**/*'], series(packjs))
 }
 
-// clear方法
-function clear(){
-    return function() {
-        return del(target)
-    }
-}
 exports.default = series(parallel(packjs,packCSS,copylibs,copyimages,copyicons),copyhtml,webserver,watcher)
