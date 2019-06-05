@@ -8,6 +8,7 @@ const del = require('del')
 
 
 
+
 // 拷贝 index.html 到 dev 
 function copyhtml(){
     return src('./*.html')

@@ -1,7 +1,122 @@
 @import '../common/icons.scss';
 
+#app{
+    height: 100%;
+}
+
 .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     header{
-        height: .44rem;
+        display: flex;
+        width: 100%;
+        height: 0.43988rem;
+        margin: 0 auto;
+        background-color: #fff;
+        line-height: 0.43988rem;
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-start;
+        .logo{
+            height: 100%;
+            width: 0.56337rem;
+            > a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                font-size: 0.3666rem;
+                text-align: center;
+                color: #f0374e;
+            }
+        }
+        .search_box{
+            width: 2.62525rem;
+            height: 0.4765rem;
+            overflow: hidden;
+            .search{
+                width: 100%;
+                height: 0.325rem;
+                margin: 0.07592rem auto;
+                border-radius: 0.165rem;
+                background-color: #e8ecf0;
+                .text_box{
+                   padding-left: 0.3575rem;
+                   padding-right: 0.13rem; 
+                   height: 100%;
+                   width: 2.6252rem;
+                   display: flex;
+                    justify-content:center;
+                    align-items:Center;
+                    > i{
+                        width: 0.2275rem;
+                        height: 0.325rem;
+                        margin-left: -0.2275rem;
+                        font-size: 0.18rem;
+                        text-align: center;
+                        line-height: 0.325rem;
+                        color: #b5bec5;
+                    }
+                   .keyword{
+                       padding-top: 0.078rem;
+                       padding-bottom: 0.091rem;
+                       width: 2.1378rem;
+                       height: 0.325rem;
+                       border: 0;
+                       outline: none;
+                       background-color: #e8ecf0;
+                       font-size: 0.122rem;
+                       color: #b5bec5 !important;
+                   }
+                }
+                
+            }
+        }
+        .header_category{
+            width: 0.56337rem;
+            height: 0.47650rem;
+            > a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                color: #7a8992;
+                font-size: 0.2888rem;
+            }
+        }
+    }
+    main{
+        flex: 1;
+    }
+    nav{
+        height: 0.46rem;
+        display: block;
+        width: 100%;
+        padding: .06rem 0;
+        background-color: #fcfcfc;
+        opacity:.99;
+        ul{
+            display: flex;
+            justify-content: flex-start;
+            li a{
+                width: 0.75rem;
+                height: 0.33rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #4d525d;
+                > i{
+                    height: 0.24rem;
+                    font-size: 0.24rem;
+                    line-height: 0.24rem;
+                }
+                > b{
+                    font-size: 0.08rem;
+                }
+            }
+            li a.on{
+                color:red
+            }
+        }
     }
 }
